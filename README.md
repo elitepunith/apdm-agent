@@ -15,38 +15,36 @@ Built as part of **Google’s AI Agents Intensive – Capstone Project (2025)**.
 # 🌟 **Portfolio Spotlight**
 
 APDM acts as a **real-time AI security mentor**.
-It analyzes user input, selects the right tools, merges results, and gives a clear final explanation with a numeric threat score.
+It analyzes user input, selects the right tools, merges results, and provides a clear explanation with a numeric threat score.
 
 The system includes:
 
-* A Gemini-powered APDM Agent
-* Google ADK-based orchestration
+* Gemini-powered APDM Agent
+* Google ADK orchestration
 * URL checker
 * Malware detector
 * Phishing detector
 * Email parser
 * Threat score engine
 
-The final output is simple:
-**Is it safe or dangerous — and why?**
+**Final Output:**
+➡️ *Is it safe or dangerous — and why?*
 
 ---
 
 # 📸 **Project Branding & UI**
 
-### **APDM Logo (For README Preview)**
+### **APDM Logo**
 
-*(Place your image here if needed)*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/banner.png" width="800">
+</p>
 
-```
-[Insert APDM Banner Image]
-```
+### **Architecture Chart**
 
-### **Architecture Demo Screenshot**
-
-```
-[Insert CLI Demo Screenshot]
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/architecture.png" width="800">
+</p>
 
 ---
 
@@ -79,26 +77,24 @@ APDM is a smart cybersecurity assistant that evaluates:
 * Messages
 * Suspicious text
 
-It combines **Gemini reasoning**, **Google ADK orchestration**, and **custom tools** to give a final threat assessment.
+It uses **Gemini reasoning**, **Google ADK**, and **custom tools** to provide final threat assessments.
 
 ---
 
 # 🎯 **Problem Statement**
 
-Cyber threats continue to rise, but beginners lack the skills to identify:
+Beginners find it difficult to identify:
 
 * Phishing
 * Malware URLs
 * Scam messages
-* Suspicious email indicators
+* Suspicious email content
 
-There is no AI system that combines:
+APDM bridges the gap by combining:
 
 ✔ analysis
 ✔ education
 ✔ protection
-
-APDM fills that gap.
 
 ---
 
@@ -107,7 +103,7 @@ APDM fills that gap.
 APDM provides:
 
 * Multi-tool threat detection
-* Smart reasoning using Gemini
+* Smart reasoning via Gemini
 * Combined threat score
 * Clear explanations
 * Real-time cybersecurity mentoring
@@ -118,27 +114,27 @@ APDM provides:
 
 ### ✔ URL Safety Analysis
 
-Validates structure, HTTP status, domain safety.
+Validates structure, fetches status, checks domain patterns.
 
 ### ✔ Malware Detection
 
-Matches domains against malware patterns.
+Flags known malicious domains.
 
 ### ✔ Email Parsing
 
-Extracts emails, links, and suspicious tokens.
+Extracts emails, URLs, and metadata.
 
 ### ✔ Phishing Detection
 
-Flags urgency keywords, fraud patterns.
+Detects urgency cues and scam text.
 
 ### ✔ Threat Scoring
 
-Scores risk from **0–10**.
+Returns a **0–10 risk score**.
 
 ### ✔ ADK Multi-Agent Architecture
 
-Gemini agent orchestrates all tools.
+Gemini orchestrates & merges results.
 
 ---
 
@@ -162,20 +158,20 @@ Gemini agent orchestrates all tools.
                    │         (Gemini 2.5 Flash Lite)         │
                    │------------------------------------------│
                    │  • Intent understanding                  │
-                   │  • Decides which tools to call           │
-                   │  • Merges outputs                        │
-                   │  • Generates final explanation           │
+                   │  • Tool selection                        │
+                   │  • Output merging                        │
+                   │  • Summary generation                   │
                    └──────────────┬───────────────────────────┘
                                   │ Tool Calls
                                   ▼
         ┌─────────────────────────────────────────────────────────────────────┐
         │                                TOOLS                                │
         │---------------------------------------------------------------------│
-        │  • URL Checker – Validates URL + HTTP status                        │
-        │  • Malware Detector – Detects unsafe domains                         │
-        │  • Phishing Detector – Flags known phishing patterns                 │
-        │  • Email Parser – Extracts emails, tokens, URLs                      │
-        │  • Threat Score Tool – Returns final numeric risk (0–10)             │
+        │  • URL Checker Tool                                                 │
+        │  • Malware Detector Tool                                            │
+        │  • Phishing Detector Tool                                           │
+        │  • Email Parser Tool                                                │
+        │  • Threat Score Tool                                                │
         └──────────────────────────────┬───────────────────────────────────────┘
                                        │ Tool Results
                                        ▼
@@ -198,10 +194,10 @@ Gemini agent orchestrates all tools.
 | Tool                | Purpose                             |
 | ------------------- | ----------------------------------- |
 | URL Checker         | Fetches & validates URLs            |
-| Malware Detector    | Matches malware patterns            |
-| Phishing Detector   | Detects phishing markers            |
+| Malware Detector    | Detects unsafe domains              |
+| Phishing Detector   | Flags phishing content              |
 | Email Parser        | Extracts and analyzes email content |
-| Threat Score Engine | Calculates a final score            |
+| Threat Score Engine | Calculates final risk score         |
 
 ---
 
@@ -210,11 +206,11 @@ Gemini agent orchestrates all tools.
 ### **Coordinator / APDM Agent**
 
 * Determines intent
-* Selects tools
-* Merges tool results
-* Generates the final explanation
+* Selects and calls tools
+* Merges their outputs
+* Produces the final reasoning
 
-Model:
+Model used:
 
 ```
 Gemini 2.5 Flash Lite
@@ -301,47 +297,54 @@ analyze this URL: http://free-gift-claim-now.xyz/login
 ⚠️ High Risk (Score: 9/10)
 
 - Suspicious domain (.xyz)
-- Phishing keywords: “claim", “gift”
-- Known malicious pattern detected
+- Phishing keywords detected
+- Malicious pattern found
 
 Recommendation:
-Do NOT open this URL.
+❗ Do NOT open this URL.
 ```
+
+---
+
+# 🖥️ **Demo Output**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/demo.png" width="900">
+</p>
 
 ---
 
 # 📝 **Evaluation Criteria Coverage**
 
-✔ Clear pitch
-✔ Working multi-agent system
-✔ ADK-based orchestration
-✔ Custom cybersecurity tools
-✔ Strong reasoning through Gemini
-✔ Clean structure, easy evaluation
-✔ Ready for deployment/demo
+✔ Clear problem
+✔ Strong ADK implementation
+✔ Multi-tool selection
+✔ Clean architecture
+✔ Good observability
+✔ High-quality reasoning
 
 ---
 
 # ⚠️ **Limitations**
 
-* Rule-based detection (not ML trained)
-* No real-time sandbox analysis
-* Cannot detect zero-day threats
+* Rule-based logic (no ML training)
+* No real-time sandboxing
+* Cannot detect zero-day attacks
 
 ---
 
 # 🔮 **Future Enhancements**
 
-* Add ML-based phishing classifier
-* Add browser extension
-* Add sandbox URL execution
-* Add user learning memory
-* Add threat timeline history
+* ML phishing classifier
+* Browser extension
+* Sandboxed URL execution
+* Memory-based personalization
+* Threat history dashboard
 
 ---
 
 # 📄 **License**
 
-Licensed under **CC-BY-SA 4.0**, as required by the competition rules.
+Licensed under **CC-BY-SA 4.0**, as required by the competition.
 
 ---
