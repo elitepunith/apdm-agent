@@ -1,3 +1,7 @@
-google-adk
-google-generativeai
+google-adk==1.19.0
+google-genai>=0.7.0
+python-dotenv
 requests
+aiohttp
+validators
+tldextract
