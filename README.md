@@ -37,13 +37,7 @@ The system includes:
 ### **APDM Logo**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/banner.png" width="800">
-</p>
-
-### **Architecture Chart**
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/architecture.png" width="800">
+  <img src="https://raw.githubusercontent.com/elitepunith/apdm-agent/main/images/banner.png" width="350">
 </p>
 
 ---
